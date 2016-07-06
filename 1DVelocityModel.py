@@ -1,3 +1,9 @@
+__author__  = "Tiago Gomes"
+__license__ = "GPL"
+__version__ = "1.0.0"
+__email__   = "tiago.gomes@ufms.br"
+
+
 import matplotlib.pyplot as plt
 
 def ler_modelos(arquivo):
