@@ -1,8 +1,7 @@
 __author__  = "Tiago Gomes"
 __license__ = "GPL"
-__version__ = "1.0.0"
+__version__ = "0.0.1"
 __email__   = "tiago.gomes@ufms.br"
-
 
 import matplotlib.pyplot as plt
 
@@ -27,15 +26,15 @@ fig = plt.figure()
 rect = fig.patch
 rect.set_facecolor('w')
 x, y = ler_modelos('iaspei.csv')
-x2, y2 = ler_modelos('newbr.csv')
-x3, y3 = ler_modelos('newbr_modificado.csv')
+#x2, y2 = ler_modelos('newbr.csv')
+#x3, y3 = ler_modelos('newbr_modificado.csv')
 
 
 ax1 = fig.add_subplot(1, 1, 1, axisbg='w')
 plt.subplots_adjust(bottom=0.20, right=0.65, top=0.80, left=0.35)
 ax1.plot(x, y, 'c', linewidth=2.5, linestyle='-', label= 'IASPEI')
-ax1.plot(x2, y2, 'r', linewidth=2.5, linestyle='-', label= 'NewBR')
-ax1.plot(x3, y3, 'b', linewidth=2.5, linestyle='--', label= 'Pantanal')
+#ax1.plot(x2, y2, 'r', linewidth=2.5, linestyle='-', label= 'NewBR')
+#ax1.plot(x3, y3, 'b', linewidth=2.5, linestyle='--', label= 'Pantanal')
 ax1.legend(loc='lower left')
 
 #ax1.set_title('Modelos de Velocidade IASPEI e NewBR')
@@ -48,6 +47,7 @@ ax1.scale_y = 1e3
 ax1.invert_yaxis()
 ax1.set_xlim(xmin=5)
 ax1.grid()
+# Add seta na descontinuidade
 ax1.annotate('Descontinuidade', xy=(7, 30), xycoords='data', xytext=(0.6, 0.6), textcoords='axes fraction',
                 arrowprops=dict(facecolor='black', shrink=0.05),
                 horizontalalignment='left', verticalalignment='bottom', )
