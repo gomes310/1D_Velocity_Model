@@ -25,7 +25,7 @@ def ler_modelos(arquivo):
 fig = plt.figure()
 rect = fig.patch
 rect.set_facecolor('w')
-x, y = ler_modelos('iaspei.csv')
+x, y = ler_modelos('iasp91.csv')
 #x2, y2 = ler_modelos('newbr.csv')
 #x3, y3 = ler_modelos('newbr_modificado.csv')
 
